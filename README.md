@@ -1,5 +1,7 @@
 # HAMSTR
 
+[![Build Status](https://travis-ci.org/nilsnh/hamstr.svg?branch=master)](https://travis-ci.org/nilsnh/hamstr)
+
 Move mountains of SQL data.
 
 ## Features
