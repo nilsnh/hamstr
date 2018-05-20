@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "tsc"
+    "test": "tsc",
+    "deploy": "tsc && npm publish"
   },
   "keywords": ["mysql", "ssh-tunnel", "mysqldump"],
   "author": "Nils Norman Haukås",
