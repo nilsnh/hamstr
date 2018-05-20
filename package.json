@@ -6,13 +6,9 @@
   "scripts": {
     "build": "tsc",
     "test": "tsc",
-    "deploy": "tsc && npm publish"
+    "prepublish": "tsc"
   },
-  "keywords": [
-    "mysql",
-    "ssh-tunnel",
-    "mysqldump"
-  ],
+  "keywords": ["mysql", "ssh-tunnel", "mysqldump"],
   "author": "Nils Norman Haukås",
   "license": "MIT",
   "dependencies": {
