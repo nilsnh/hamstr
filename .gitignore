@@ -1,0 +1,6 @@
+.env
+*.sql
+/node_modules/
+.env
+.DS_Store
+/dist

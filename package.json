@@ -1,0 +1,33 @@
+{
+  "name": "hamstr",
+  "version": "1.0.0",
+  "description": "Let the hamster move mountains of MySQL data.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc"
+  },
+  "keywords": [
+    "mysql",
+    "ssh-tunnel",
+    "mysqldump"
+  ],
+  "author": "Nils Norman Haukås",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "dotenv": "^5.0.1",
+    "mysql-parse": "^2.0.3",
+    "tunnel-ssh": "^4.1.4"
+  },
+  "bin": {
+    "hamstr": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.17",
+    "typescript": "^2.8.3"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
