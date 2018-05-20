@@ -7,11 +7,7 @@
     "build": "tsc",
     "test": "tsc"
   },
-  "keywords": [
-    "mysql",
-    "ssh-tunnel",
-    "mysqldump"
-  ],
+  "keywords": ["mysql", "ssh-tunnel", "mysqldump"],
   "author": "Nils Norman Haukås",
   "license": "MIT",
   "dependencies": {
@@ -29,5 +25,9 @@
   },
   "engines": {
     "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nilsnh/hamstr"
   }
 }
