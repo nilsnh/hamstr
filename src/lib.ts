@@ -1,6 +1,6 @@
 import { buildMysqlParams, parseUri } from 'mysql-parse'
 import { promisify } from 'util'
-const exec = promisify(require('child_process').exec)
+import { exec } from 'child_process'
 const tunnel = promisify(require('tunnel-ssh'))
 
 interface ProgramInput {
@@ -58,9 +58,14 @@ async function openTunnel(tunnelConfig: TunnelConfig) {
 async function runMysqldump({ uri, path }: MysqldumpConfig) {
   const params = buildMysqlParams(uri)
   console.log(`Running mysqldump, saving data in ${path}`)
-  const child = await exec(`mysqldump ${params} > ${path}`, null)
+  const subProcess = exec(`mysqldump ${params} > ${path}`, null, error => {
+    if (error) {
+      throw error
+    }
+    return true
+  })
   // if we kill node we should kill mysql as well
-  process.on('exit', () => child.kill())
+  process.on('exit', () => (subProcess ? subProcess.kill() : ''))
 }
 
 function getOrExit(variable: string): string {
