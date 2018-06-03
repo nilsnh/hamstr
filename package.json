@@ -18,7 +18,7 @@
   "dependencies": {
     "commander": "^2.15.1",
     "dotenv": "^5.0.1",
-    "mysql-parse": "^2.0.3",
+    "mysql-parse": "^2.0.7",
     "tunnel-ssh": "^4.1.4"
   },
   "bin": {
